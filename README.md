@@ -1,5 +1,6 @@
 # ✨ BTS (Bithumb NTF SNS) 💰
 
+## 담당자 백인준
 
 ## 👉 프로젝트 소개
 
