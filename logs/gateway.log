@@ -1,0 +1,110 @@
+21:41:57.368 INFO  HV000001: Hibernate Validator 6.1.7.Final
+21:41:57.417 INFO  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+21:41:58.887 INFO  Fetching config from server at : http://172.17.0.1:8888
+21:42:09.037 INFO  Connect Timeout Exception on Url - http://172.17.0.1:8888. Will be trying the next url if available
+21:42:09.037 WARN  Could not locate PropertySource: I/O error on GET request for "http://172.17.0.1:8888/gateway-server/test": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out
+21:42:09.039 INFO  No active profile set, falling back to default profiles: default
+21:42:10.918 INFO  BeanFactory id=92adc953-d88d-35e5-8751-7e1ea28a8434
+21:42:10.938 INFO  @Bean method FunctionConfiguration.po is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+21:42:10.958 INFO  No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+21:42:10.965 INFO  No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+21:42:10.970 INFO  No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+21:42:11.358 INFO  Bean 'org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration' of type [org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration$$EnhancerBySpringCGLIB$$a4f819f7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:42:11.366 INFO  Bean 'bindersHealthContributor' of type [org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration$BindersHealthContributor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:42:11.371 INFO  Bean 'bindersHealthIndicatorListener' of type [org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration$BindersHealthIndicatorListener] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:42:11.396 INFO  Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:42:11.413 INFO  Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:42:11.416 INFO  Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:42:11.440 INFO  Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:42:11.442 INFO  Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:42:11.444 INFO  Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:42:12.369 WARN  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'gatewayHttpClient' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$NettyConfiguration.class]: Initialization of bean failed; nested exception is java.lang.NoSuchMethodError: reactor.netty.http.client.HttpClient.mapConnect(Ljava/util/function/BiFunction;)Lreactor/netty/http/client/HttpClient;
+21:42:12.463 INFO  
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+21:42:12.489 ERROR 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.cloud.sleuth.instrument.web.client.HttpClientBeanPostProcessor.postProcessAfterInitialization(HttpClientBeanPostProcessor.java:71)
+
+The following method did not exist:
+
+    reactor.netty.http.client.HttpClient.mapConnect(Ljava/util/function/BiFunction;)Lreactor/netty/http/client/HttpClient;
+
+The method's class, reactor.netty.http.client.HttpClient, is available from the following locations:
+
+    jar:file:/C:/Users/bitcamp/.gradle/caches/modules-2/files-2.1/io.projectreactor.netty/reactor-netty-http/1.0.10/f34196d8778243d2ac4a4ae7cc74f110d1073803/reactor-netty-http-1.0.10.jar!/reactor/netty/http/client/HttpClient.class
+
+The class hierarchy was loaded from the following locations:
+
+    reactor.netty.http.client.HttpClient: file:/C:/Users/bitcamp/.gradle/caches/modules-2/files-2.1/io.projectreactor.netty/reactor-netty-http/1.0.10/f34196d8778243d2ac4a4ae7cc74f110d1073803/reactor-netty-http-1.0.10.jar
+    reactor.netty.transport.ClientTransport: file:/C:/Users/bitcamp/.gradle/caches/modules-2/files-2.1/io.projectreactor.netty/reactor-netty-core/1.0.10/dcb5d53dc07a6f660060f0b55c40a1e9944a6fe1/reactor-netty-core-1.0.10.jar
+    reactor.netty.transport.Transport: file:/C:/Users/bitcamp/.gradle/caches/modules-2/files-2.1/io.projectreactor.netty/reactor-netty-core/1.0.10/dcb5d53dc07a6f660060f0b55c40a1e9944a6fe1/reactor-netty-core-1.0.10.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of reactor.netty.http.client.HttpClient
+
+21:43:36.849 INFO  HV000001: Hibernate Validator 6.1.7.Final
+21:43:36.902 INFO  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+21:43:37.785 INFO  Fetching config from server at : http://172.17.0.1:8888
+21:43:47.912 INFO  Connect Timeout Exception on Url - http://172.17.0.1:8888. Will be trying the next url if available
+21:43:47.912 WARN  Could not locate PropertySource: I/O error on GET request for "http://172.17.0.1:8888/gateway-server/test": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out
+21:43:47.914 INFO  No active profile set, falling back to default profiles: default
+21:43:49.678 INFO  BeanFactory id=92adc953-d88d-35e5-8751-7e1ea28a8434
+21:43:49.698 INFO  @Bean method FunctionConfiguration.po is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+21:43:49.719 INFO  No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+21:43:49.726 INFO  No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+21:43:49.732 INFO  No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+21:43:50.067 INFO  Bean 'org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration' of type [org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration$$EnhancerBySpringCGLIB$$1e1e6dc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:43:50.077 INFO  Bean 'bindersHealthContributor' of type [org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration$BindersHealthContributor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:43:50.083 INFO  Bean 'bindersHealthIndicatorListener' of type [org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration$BindersHealthIndicatorListener] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:43:50.109 INFO  Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:43:50.127 INFO  Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:43:50.129 INFO  Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:43:50.152 INFO  Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:43:50.155 INFO  Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:43:50.158 INFO  Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+21:43:51.112 WARN  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'gatewayHttpClient' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$NettyConfiguration.class]: Initialization of bean failed; nested exception is java.lang.NoSuchMethodError: reactor.netty.http.client.HttpClient.mapConnect(Ljava/util/function/BiFunction;)Lreactor/netty/http/client/HttpClient;
+21:43:51.206 INFO  
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+21:43:51.237 ERROR 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.cloud.sleuth.instrument.web.client.HttpClientBeanPostProcessor.postProcessAfterInitialization(HttpClientBeanPostProcessor.java:71)
+
+The following method did not exist:
+
+    reactor.netty.http.client.HttpClient.mapConnect(Ljava/util/function/BiFunction;)Lreactor/netty/http/client/HttpClient;
+
+The method's class, reactor.netty.http.client.HttpClient, is available from the following locations:
+
+    jar:file:/C:/Users/bitcamp/.gradle/caches/modules-2/files-2.1/io.projectreactor.netty/reactor-netty-http/1.0.10/f34196d8778243d2ac4a4ae7cc74f110d1073803/reactor-netty-http-1.0.10.jar!/reactor/netty/http/client/HttpClient.class
+
+The class hierarchy was loaded from the following locations:
+
+    reactor.netty.http.client.HttpClient: file:/C:/Users/bitcamp/.gradle/caches/modules-2/files-2.1/io.projectreactor.netty/reactor-netty-http/1.0.10/f34196d8778243d2ac4a4ae7cc74f110d1073803/reactor-netty-http-1.0.10.jar
+    reactor.netty.transport.ClientTransport: file:/C:/Users/bitcamp/.gradle/caches/modules-2/files-2.1/io.projectreactor.netty/reactor-netty-core/1.0.10/dcb5d53dc07a6f660060f0b55c40a1e9944a6fe1/reactor-netty-core-1.0.10.jar
+    reactor.netty.transport.Transport: file:/C:/Users/bitcamp/.gradle/caches/modules-2/files-2.1/io.projectreactor.netty/reactor-netty-core/1.0.10/dcb5d53dc07a6f660060f0b55c40a1e9944a6fe1/reactor-netty-core-1.0.10.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of reactor.netty.http.client.HttpClient
+
