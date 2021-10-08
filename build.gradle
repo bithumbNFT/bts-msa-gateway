@@ -37,7 +37,6 @@ dependencies {
     //loging
     implementation 'net.logstash.logback:logstash-logback-encoder:5.1'
     implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-zipkin', version: '2.2.3.RELEASE'
-    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-sleuth', version: '2.2.3.RELEASE'
 }
 dependencyManagement {
     imports {
